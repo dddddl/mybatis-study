@@ -7,6 +7,14 @@
 
     <properties resource="jdbc-config.properties"/>
 
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+    <typeAliases>
+        <package name="com.tjise.entity"/>
+    </typeAliases>
+
     <environments default="mysql">
 
         <environment id="mysql">
@@ -28,5 +36,9 @@
 
     <mappers>
         <mapper resource="com/tjise/mapper/UserMapper.xml"/>
+<!--        <mapper resource="com/tjise/mapper/StudentMapper.xml"/>-->
+        <mapper class="com.tjise.mapper.StudentMapper"/>
+        <mapper class="com.tjise.mapper.TeacherMapper"/>
+        <mapper class="com.tjise.mapper.BlobMapper"/>
     </mappers>
 </configuration>
